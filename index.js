@@ -32,7 +32,7 @@ app.post('/order', async (req, res) => {
         total_amount: req.body.price,
         currency: 'BDT',
         tran_id: tran_id, // use unique tran_id for each api call
-        success_url: `http://localhost:5173/payment/success/${tran_id}`,
+        success_url: `https://dotpot-frontend.vercel.app/payment/success/${tran_id}`,
         fail_url: `http://localhost:5000/payment/fail/${tran_id}`,
         cancel_url: 'http://localhost:3030/cancel',
         ipn_url: 'http://localhost:3030/ipn',
